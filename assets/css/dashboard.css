@@ -1,0 +1,295 @@
+ @import url('https://fonts.googleapis.com/css?family=Quicksand');
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+        background: #fff;
+}
+body{
+  background-color: #fff;
+}
+header{
+	position: fixed;
+    width: 100%;
+    top: 0;
+    height: 55px;
+    left: 0px;
+    background: #fff ;
+    z-index: 1000;
+    box-shadow: 0 2px 5px #ddd;
+}
+.userporfile{
+	width: 10%;
+    float: right;
+    margin: 1.5% 0%;
+}
+.userporfile a{
+	line-height: 50px;
+	color: #444;
+}
+.logo{
+    background: #fff;
+    font-family: "ALHAMBRA";
+    font-size: 2em;
+    line-height: 55px;
+    margin-left: 3%;
+    font-style: italic;
+    float: left;
+    text-align: center;
+}
+
+#uname{
+  color: #444;  
+  font-family: "ALHAMBRA";
+}
+#logout i{
+    margin-left: 10%;
+    font-size: 1.3em;
+    color: #555;
+}
+#logout i:hover{
+    color: #aaa;
+}
+/*--------sidebar----------*/
+.sidebar{
+	width: 20%;
+	height: 95vh;
+	position: fixed;
+	left: 0;
+	top: 8%;
+    overflow:hidden; 
+	background: #ccc !important;
+}
+
+.waves-effect{
+	color: #777;
+}
+.waves-effect i{
+	margin: 2%;
+}
+.nav{
+	margin-top: 20%;
+}
+.nav li a{
+	color: #fff;
+    transition: 0.3s;
+}
+.nav li a i{
+    margin: 2%;
+    transition: 0.3s;
+}
+.nav li a:hover{
+    background: #fff !important;
+    color: #aaa;
+    }
+.nav li a:hover i{
+    color: #aaa;
+}
+
+
+
+/*---------main page----------*/
+.main-page{
+	width: 80%;
+	margin-top: -4%;
+    background-image: url(img/dashboard-back.jpg);
+    background-color:rgba(255,255,255,0.94);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: screen; 
+    margin-left: 20%;
+}
+
+
+/*--------order div-----------*/
+.orders{
+    padding: 2% 5%;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 10%;
+    margin-bottom: 20px;
+}
+.table{
+    box-shadow: 0 2px 5px #eaeaea !important;
+    border-radius: 10px 10px 0 0 !important;
+}
+.table>thead>tr>th {
+    border-bottom: none !important;
+    font-size: 0.9em;
+    color: #fff;
+    background: #ccc;
+    font-weight: 500;
+}
+.table>thead>tr>th:first-child{
+	border-radius: 10px 0 0 0;
+}
+.table>thead>tr>th:last-child{
+	border-radius: 0 10px 0 0;
+    
+}
+
+.table>tbody>tr>td{
+	border-top: none !important;
+    background: #fff;
+    font-size: 0.9em;
+    text-transform: capitalize;
+}
+.table>tbody>tr>td:nth-child(3){
+    text-transform: none;
+}
+/*------add menu div--------*/
+.add{
+	width: 100%;
+	background: transparent;
+	overflow: auto;
+    font-size: 0.9em;
+}
+#addmenu{
+	position: relative;
+	width: 35%;
+    background-color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    background-image: url('img/div-back.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-color: rgba(90, 87, 82, 0.58);
+    border-radius: 10px;
+    padding: 1%;
+    margin-left: 5%;
+    float: left;
+    text-align: center;
+}
+.input{
+	width: 75%;
+    border-radius: 10px;
+    border: none;
+    padding: 2%;
+    outline: none;
+    margin: 5px;
+    b
+}
+#category{
+    width: 75%;
+    padding: 2%;
+    color: #555;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin: 5px;
+    
+}
+#desc{
+	border-radius: 10px;
+    width: 75%;
+    border: none;
+    padding: 2%;
+    outline: none;
+    margin: 5px;
+    b
+}
+#quantity{
+	height: 40px;
+	padding: 10px;
+	color: #555;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+	margin: 5px;
+	
+}
+#submit{
+	font-family: 'Quicksand', sans-serif;
+	padding: 2%;
+	border-radius: 25px;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	outline: none;
+	margin: 1% ;
+}
+.fa{
+	text-decoration: none;
+	color: #fff;
+}
+.tooltip_menu{
+	display: none;
+    padding: 1%;
+    position: absolute;
+    left: 57%;
+    bottom: 1%;
+    border-radius: 25px;
+    background: #d2d2d2;
+    width: 20%;
+    color: #000;
+    font-size: 81%;
+}
+#show_menu{
+	display: block;
+	text-decoration:none;
+	color: #fff;
+	margin-top: 2%;
+}
+#show_menu:hover .tooltip_menu{
+	display: block;
+}
+
+#add-title{
+	margin: 1%;
+}
+.radio{
+	width: 30%;
+	display: inline-block !important;
+}
+input[type="radio"]{
+margin-left: 0 !important;
+}
+/*--------add admin-----------*/
+.addAdmin{
+    background-image: url(img/div-back.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-color: rgba(0,0,0,.5);
+    width: 30%;
+    float: right;
+    margin-right: 5%;
+    padding: 2%;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 0.9em;
+}
+.addAdmin input{
+	border-radius: 10px;
+	border:none;
+	outline: none;
+	padding: 2%;
+	
+	font-family: 'Quicksand', sans-serif;
+	margin-bottom: 4%;
+    width: 80%;
+}
+input[type="submit"]{
+	font-family: 'Quicksand', sans-serif;
+	padding: 2%;
+	border-radius: 25px;
+	background-color: #444;
+	color: #fff;
+	border: none;
+	outline: none;
+	margin: 1% ;
+	width: auto;
+	box-shadow: 0 2px 5px #000;
+}
+/*------users div-------*/
+.users{
+    padding: 2% 5%;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 5%;
+    margin-bottom: 20px;
+}

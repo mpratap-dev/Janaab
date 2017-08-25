@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slideshow</title>
+    <style type="text/css">
+    	img{
+    		width: 200px;
+    	}
+    </style>
+</head>
+<body>
+	<div class="carousel">
+		<img src="image.png" alt="image">
+		<img src="image.png" alt="image">
+		<img src="image.png" alt="image">
+		<img src="image.png" alt="image">
+		<img src="image.png" alt="image">
+		<img src="image.png" alt="image">
+		<img src="image.png" alt="image">
+		<img src="image.png" alt="image">
+	</div>
+	
+
+  <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="jquery.waterwheelCarousel.js"></script>
+  <script type="text/javascript">
+	  $(document).ready(function() {
+	  var carousel= $(".carousel").waterwheelCarousel({
+	      flankingItems:3
+	    });
+      
+	  });
+	</script>
+</body>
+
+</html>

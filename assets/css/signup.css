@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+*{
+	padding:0;
+	margin: 0;
+}
+body{
+	font-family: 'Quicksand', sans-serif;
+	background-image: url(img/signup.jpg);
+	background-size: cover;
+	background-color: rgba(0,0,0,0.9);
+	background-blend-mode: soft-light;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.signup{
+    background:#030d0e;
+    position: absolute;
+    top: 45px;
+    overflow: auto;
+    padding: 0;
+    left: 27%;
+}
+form a{
+	color:#fff;
+	font-size: 80%;
+	margin-left: 35%;
+    margin-top: 4%;
+    display: block;
+}
+form a:hover{
+    color:#fff ;
+}
+input{
+	margin-bottom: 2%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 3%;
+    font-size: 80%;
+}
+input[type="submit"]{
+	width: 18%;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+    padding: 2%;
+    margin: 0 45%;
+    font-size: 80%;
+    background-color: #333;
+    color: #fff;
+}
+textarea{
+	width: 65%;
+    height: 95px;
+    border-radius: 5px;
+    border: none;
+	outline: none;
+    padding: 2%;
+    font-size: 80%;
+    margin-bottom: 5%;
+}
+h2{
+	 font-family: "ALHAMBRA";
+	 font-style: italic;
+	 color: #6b5c25;
+	 margin-bottom: 9%;
+    text-align: center;
+    font-size: 150%;
+}
+#login-side{
+	float: right;
+	
+}
+.inner-signup{
+	float: left;
+	width: 70%;
+    padding: 3% 5%;
+}
+#signup-side{
+	background-image: url('img/side-back.png');
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.28);
+    background-blend-mode: overlay;
+    width: 30%;
+    height: 493px;
+    float: right;
+}
