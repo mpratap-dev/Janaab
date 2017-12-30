@@ -1,13 +1,16 @@
- @import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 *{
 	margin: 0;
 	padding: 0;
+    outline: none;
 }
 html{
         background: #fff;
 }
 body{
   background-color: #fff;
+font-family: 'Nunito', sans-serif;
 }
 header{
 	position: fixed;
@@ -36,9 +39,13 @@ header{
     margin-left: 3%;
     font-style: italic;
     float: left;
-    text-align: center;
+    text-align: left;
+    width: 20%;
+    display: block;
 }
-
+.logo>a{
+    margin-right: 5%;
+}
 #uname{
   color: #444;  
   font-family: "ALHAMBRA";
@@ -59,9 +66,12 @@ header{
 	left: 0;
 	top: 8%;
     overflow:hidden; 
-	background: #ccc !important;
+	background: #f9f9f9 !important;
+    transition: 0.5s;
 }
-
+.sidebar-min{
+    left: -20%;
+}
 .waves-effect{
 	color: #777;
 }
@@ -72,43 +82,49 @@ header{
 	margin-top: 20%;
 }
 .nav li a{
-	color: #fff;
+	color: #999;
     transition: 0.3s;
 }
 .nav li a i{
-    margin: 2%;
+    margin: 2% 3%;
     transition: 0.3s;
+    color: #999;
 }
-.nav li a:hover{
-    background: #fff !important;
-    color: #aaa;
+.nav li a:hover,.nav li a:focus{
+    background: #424141 !important;
+    color: #fff;
     }
 .nav li a:hover i{
-    color: #aaa;
+    color: #fff;
 }
-
+.nav-icon i{
+    color: #aaa;
+    font-size: 65%;
+}
 
 
 /*---------main page----------*/
 .main-page{
 	width: 80%;
-	margin-top: -4%;
-    background-image: url(img/dashboard-back.jpg);
+	margin-top: 7%;
     background-color:rgba(255,255,255,0.94);
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-blend-mode: screen; 
-    margin-left: 20%;
+    float: right;
+    transition: 0.5s;
 }
-
+.main-page-min{
+    width: 100%;
+}
 
 /*--------order div-----------*/
 .orders{
-    padding: 2% 5%;
+    padding: 0% 5% 2%;
     width: 100%;
     max-width: 100%;
-    margin-top: 10%;
     margin-bottom: 20px;
 }
 .table{
@@ -119,8 +135,9 @@ header{
     border-bottom: none !important;
     font-size: 0.9em;
     color: #fff;
-    background: #ccc;
+    background: #636060;
     font-weight: 500;
+    font-family: 'Nunito', sans-serif;
 }
 .table>thead>tr>th:first-child{
 	border-radius: 10px 0 0 0;
@@ -131,77 +148,124 @@ header{
 }
 
 .table>tbody>tr>td{
-	border-top: none !important;
+    font-family: 'Nunito', sans-serif;
+    border-top: none !important;
     background: #fff;
-    font-size: 0.9em;
+    font-size: 80%;
+    box-shadow: inset 0 1px 1px 1px #f9f9f9;
     text-transform: capitalize;
 }
 .table>tbody>tr>td:nth-child(3){
     text-transform: none;
 }
 /*------add menu div--------*/
-.add{
+#add{
 	width: 100%;
 	background: transparent;
 	overflow: auto;
     font-size: 0.9em;
 }
 #addmenu{
-	position: relative;
-	width: 35%;
+    position: relative;
+    width: 45%;
     background-color: #fff;
     font-family: 'Quicksand', sans-serif;
-    background-image: url('img/div-back.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: unset;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
-    background-color: rgba(90, 87, 82, 0.58);
+    background-color: #424141;
     border-radius: 10px;
-    padding: 1%;
+    padding: 0 0 1% 0;
     margin-left: 5%;
     float: left;
     text-align: center;
 }
 .input{
 	width: 75%;
-    border-radius: 10px;
+    border-radius: 3px;
     border: none;
     padding: 2%;
     outline: none;
     margin: 5px;
-    b
+ 
 }
 #category{
     width: 75%;
     padding: 2%;
     color: #555;
-    border-radius: 10px;
+    border-radius: 3px;
     border: none;
     outline: none;
     margin: 5px;
-    
+ 
 }
 #desc{
-	border-radius: 10px;
+    border-radius: 3px;
     width: 75%;
     border: none;
     padding: 2%;
     outline: none;
     margin: 5px;
-    b
+ 
 }
 #quantity{
 	height: 40px;
 	padding: 10px;
 	color: #555;
-	border-radius: 10px;
+    border-radius: 3px;
 	border: none;
 	outline: none;
 	margin: 5px;
-	
 }
-#submit{
+
+/*----veg nonveg----*/
+.content-div{
+    padding: 1%;
+    overflow: auto;
+}
+.content{
+    display: inline;
+}
+.content label{
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    /* display: block; */
+    /* height: 68px; */
+    width: 20%;
+    background: #fff;
+
+    padding: 3%;
+    cursor: pointer;
+    font-size: 1em;
+    opacity: .5;
+    border-radius: 5px;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+input[type="radio"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+img{
+    width: 100%;
+}
+.content label:hover,.content label:focus,.content label:active{
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+input[type="radio"]:active ~ label {
+  opacity: 1;
+  background: #fef39c;
+}
+
+input[type="radio"]:checked ~ label {
+  opacity: 1;
+  border: 1px solid #333;
+}
+/*#submit{
 	font-family: 'Quicksand', sans-serif;
 	padding: 2%;
 	border-radius: 25px;
@@ -210,7 +274,7 @@ header{
 	border: none;
 	outline: none;
 	margin: 1% ;
-}
+}*/
 .fa{
 	text-decoration: none;
 	color: #fff;
@@ -221,54 +285,57 @@ header{
     position: absolute;
     left: 57%;
     bottom: 1%;
-    border-radius: 25px;
+    border-radius: 3px;
     background: #d2d2d2;
     width: 20%;
     color: #000;
     font-size: 81%;
 }
 #show_menu{
-	display: block;
-	text-decoration:none;
-	color: #fff;
-	margin-top: 2%;
-}
-#show_menu:hover .tooltip_menu{
-	display: block;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    width: 10%;
+    margin: 3% auto;
 }
 
+
 #add-title{
-	margin: 1%;
+    text-align: left;
+    font-size:13px;
+    color: #fff;
+    display: block;
+    padding: 4%;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
 }
-.radio{
-	width: 30%;
-	display: inline-block !important;
+#add-title i{
+    font-size: 150%;
+    margin:0 2%;
 }
-input[type="radio"]{
-margin-left: 0 !important;
-}
+
+
 /*--------add admin-----------*/
 .addAdmin{
-    background-image: url(img/div-back.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-blend-mode: overlay;
-    background-color: rgba(0,0,0,.5);
-    width: 30%;
+    background-repeat: no-repeat;
+    background-blend-mode: difference;
+    background-color: #424141;
+    width: 40%;
     float: right;
     margin-right: 5%;
-    padding: 2%;
+    padding: 0 0 1% 0;
     border-radius: 10px;
     text-align: center;
     font-size: 0.9em;
 }
 .addAdmin input{
-	border-radius: 10px;
+	border-radius: 3px;
 	border:none;
 	outline: none;
 	padding: 2%;
-	
 	font-family: 'Quicksand', sans-serif;
 	margin-bottom: 4%;
     width: 80%;
@@ -284,12 +351,76 @@ input[type="submit"]{
 	margin: 1% ;
 	width: auto;
 	box-shadow: 0 2px 5px #000;
+    transition: 0.1s;
+}
+input[type="submit"]:hover{
+    box-shadow: inset 0 0 2px #000;
+    background-color: #333;
+    transform: translate(1px,2px);
+}
+/*-------special members------*/
+.special-opt{
+    display: none;
+    transition: 1s important;
+}
+
+.special li{
+    list-style: none;
+    padding: 2% 14% 2%;
+    background: #ddd;
+}
+.special li a{
+    text-decoration: none;
+    color: #777 !important;
+}
+.special li i{
+     color: #777 !important;
+}
+.special li:hover{
+    background: #424141 !important;
+    color: #fff !important; 
+}
+.special li:hover a{
+    color: #fff !important;
+}
+.special li:hover i{
+    color: #fff !important;
+}
+.special li a:hover{
+    text-decoration: none !important;
 }
 /*------users div-------*/
-.users{
+#users{
     padding: 2% 5%;
     width: 100%;
     max-width: 100%;
     margin-top: 5%;
     margin-bottom: 20px;
+}
+
+/*------media queries-------*/
+@media screen and (max-width: 768px){
+
+    .sidebar{
+      left: -20%;
+      z-index: 100;
+      height: 100vh;
+      top: 5%;
+      height: 100%;
+    }
+    .sidebar-min{
+        width: 70%;
+        left: 0;
+        top: 5%;
+        height: 100%;
+    }
+    .main-page{
+        width: 100%;
+    }
+    .logo{
+        width: 100%;
+    }
+    .logo>a {
+    margin-right: 10%;
+    }
 }

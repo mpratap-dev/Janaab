@@ -1,4 +1,4 @@
 <?php
-@mysql_connect("localhost", "root", "12345") or die(mysql_error());
-mysql_select_db("janaab") or die("Cannot find database");
+@mysql_connect("mysql.hostinger.in", "u177269853_root", "123456") or die(mysql_error());
+mysql_select_db("u177269853_janab") or die("Cannot find database");
 ?>

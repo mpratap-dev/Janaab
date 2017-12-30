@@ -26,6 +26,7 @@ session_start();
 <html>
 <head>
 	<title>Janaab Restaurant</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="assets/css/img/logo_new.png" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css" href="assets/css/login.css">
 	<link rel="stylesheet" href="assets/css/animate.css">
@@ -45,6 +46,7 @@ session_start();
 			  	<input type="password" name="pass" class="txt" placeholder="Password"><br>
 			  	<input type="submit" id="submit" name="submit" value="LOGIN"><br>
 			  	<a id="newuser" href="signup.php">New User ? Be a member now</a>
+			  	 <a href="#" id="forget">Forgot Password ?</a>
 		  </form>
 	 	</div>
 	 	<div id="login-side">

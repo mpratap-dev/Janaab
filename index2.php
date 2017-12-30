@@ -2,97 +2,74 @@
 <html>
 <head>
 	<title>Janaab Restaurant</title>
-  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Janaab logo-->
     <link rel="shortcut icon" href="assets/css/img/logo_new.png">
     <!--CSS-->
-    
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/plugins/animsition/dist/css/animsition.min.css">
-    <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <style type="text/css">
         @font-face{
             font-family: "ALHAMBRA";
             src: url(assets/fonts/ALHAMBRA.TTF);
         }
-        
     </style>
 </head>
 <body>
 	<!--first div start-->
 	   <div id="first" data-parallax="scroll" data-image-src="assets/css/img/first-back.jpg">
-	       <ul id="nav-bar">
-             <a href="javascript:void(0);" class="navLogo"><img src="assets/css/img/menu.svg"></a>
-             <ul class="nav-sm-m">
-               <img src="assets/css/img/first-back2.jpg" class="navBack">
-               <a href="javascript:void(0);" class="closeM"><i class="ti ti-close" aria-hidden="true"></i></a>
-               <a class="l0C"></a>
-               <li class="l1C menuBtnClk"></li>
-               <li class="l2C menuBtnClk"></li>
-               <li class="l4C menuBtnClk"></li>
-               <li class="l5C menuBtnClk"></li>
-               <div class="navFoot">
-                 <li class="socMedia"></li>
-                 <li class="footNav"></li>
-               </div>
-               
-             </ul>
-             <li class="before-logo l1"><a href="index.php">Home</a></li>
-             <li class="before-logo l2"><a href="#about">About</a></li>
-             <a href="index.php" class="l3"><li id="logo"></li></a>
-             <a href="javascript:void(0);" class="userLogo dropdown-toggle" data-toggle="dropdown"><img src="assets/css/img/user.svg"></a>
-             <ul class="dropdown-menu">
-               <li class="l6C"></li>
-               <li class="l7C"></li>
-             </ul>
-             <li class="after-logo l4"><a href="menu.php">Menu</a></li>
-             <li class="after-logo l5"><a href="#contact">Contact</a></li>
-             <li class="l6">
-               <div class="quick-order call">
-                  <div class="call-logo">
-                    <i class="fas fa-mobile-alt"></i>
-                  </div>
-                  <div class="order-div">
-                    <p>Quick Order</p>
-                    <p id="phon">085059 09430</p>
-                  </div>
-                </div>
-             </li>
-             <li class="l7">
-               <div class="quick-order login">
-                  <div class="login-logo">
-                    <i class="far fa-user"></i>
-                  </div>
-                  <div class="login-div">
-                    <p>Quick Order</p>
-                    <?php
-                        session_start();
-                       if(!isset($_SESSION['logged']))
-                        {
-                          echo "<a id='login-register' href='login.php'><span>Login/Register</span></a></li>";
-                        }
-                       else if($_SESSION['logged'])
-                        { echo "<span id='uname'>";
-                          echo 'Hi '.$_SESSION['username'];
-                          echo "</span>";
-                          echo "<a id='logout' href='logout.php'><span class='logoutDiv'><i class='fas fa-sign-out-alt'></i></span></a></li>";
-                        }
-                    ?>
-                  </div>
-                </div>
-             </li>
-
-         </ul>
+	       <div id="nav-bar" >
+	           <nav>
+	               <ul>
+	                   <li class="before-logo"><a href="index.php">Home</a></li>
+	                   <li class="before-logo"><a href="#about">About</a></li>
+	                   <a href="index.php"><li id="logo"></li></a>
+	                   <li class="after-logo"><a href="menu.php">Menu</a></li>
+	                   <li class="after-logo"><a href="#contact">Contact</a></li>
+	                   <div class="header">
+	                      <div class="quick-order call">
+	                        <div class="call-logo">
+	                          <i class="fa fa-mobile" aria-hidden="true"></i>
+	                        </div>
+	                        <div class="order-div">
+	                          <p>Quick Order</p>
+	                          <p id="phon">085059 09430</p>
+	                        </div>
+	                      </div>
+	                      <div class="quick-order login">
+	                        <div class="login-logo">
+	                          <i class="fa fa-user-o" aria-hidden="true"></i>
+	                        </div>
+	                        <div class="login-div">
+	                          <p>Quick Order</p>
+	                          <?php
+	                              session_start();
+	                             if(!isset($_SESSION['logged']))
+	                              {
+	                                echo "<a id='login-register' href='login.php'><span>Login/Register</span></a></li>";
+	                              }
+	                             else if($_SESSION['logged'])
+	                              { echo "<span id='uname'>";
+	                                echo 'Hi '.$_SESSION['username'];
+	                                echo "</span>";
+	                                echo "<a id='logout' href='logout.php'><span > (Logout)</span></a></li>";
+	                              }
+	                          ?>
+	                        </div>
+	                      </div>
+	                    </div>
+	               </ul>
+	           </nav>
+	       </div>
 	       <span id="intro" class="animated slideInRight">
 	           <p id="h3">COME IN & TASTE</p>
-	           <i class="fas fa-utensils"></i>
+	           <i class="fa fa-cutlery" aria-hidden="true"></i>
 	           <p>FINGER LICKING AWADHI AND MUGHALAI!</p>
 	       </span>
 	   </div>
@@ -122,7 +99,7 @@
             	<div class="descDish">
             		<h3>Yakhni</h3> 
             		<p>
-            			yakhni is simply stock or broth. It is often the base for many foods including pilaf (pulao) and other chorbas or soups
+            			an Indian dish of meat, fish, or vegetables cooked with rice flavored especially with saffron or turmeric
             		</p>
             	</div>
             </div>
@@ -131,7 +108,7 @@
             	<div class="descDish">
             		<h3>Kebabs</h3> 
             		<p>
-            			Usually, kebabs. small pieces of meat or seafood seasoned or marinated and broiled, often with tomatoes, green peppers, onions, or other vegetables, usually on a skewer.
+            			an Indian dish of meat, fish, or vegetables cooked with rice flavored especially with saffron or turmeric
             		</p>
             	</div>
             </div>
@@ -149,7 +126,7 @@
             	<div class="descDish">
             		<h3>Gravy</h3> 
             		<p>
-            			ream gravy (sawmill gravy in Southern United States cuisine) is the gravy typically used in biscuits and gravy and chicken fried steak. It is essentially a Béchamel sauce, with the roux being made of meat drippings and flour.
+            			an Indian dish of meat, fish, or vegetables cooked with rice flavored especially with saffron or turmeric
             		</p>
             	</div>
             </div>
@@ -176,26 +153,16 @@
                       <div id="inner-cust">
                       <a href="https://www.zomato.com/users/karishma-chandra-39826155" target="_blank">Karishma Chandra</a><span>, Zomato</span>
                       <div id="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                      </div>
-                      <p class="cust-para "> <i class="fas fa-quote-left"></i> Good for some Mughlai food that is authentic and filling. I tried the kababs, and loved the taste and presentation. Prices are also quite decent. <i class="fas fa-quote-right"></i></p></div>
+                      <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i></div>
+                      <p class="cust-para "> <i class="fa fa-quote-left" aria-hidden="true"></i> Good for some Mughlai food that is authentic and filling. I tried the kababs, and loved the taste and presentation. Prices are also quite decent. <i class="fa fa-quote-right" aria-hidden="true"></i></p></div>
             </div>
             <div class="customer2 wow slideInUp">
                       <img class="cust-img" src="assets/css/img/customer5.jpg">
                       <div id="inner-cust">
                       <a href="https://www.zomato.com/users/the-sandman-33794697" target="_blank">The Sandman</a><span>, Zomato</span>
                       <div id="stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="far fa-star-half"></i>
-                    </div>
-                      <p class="cust-para "> <i class="fas fa-quote-left"></i> The galouti kebab roll. I had internally scoffed when the owner said its mouth melting. It really does melt in your mouth. Some kitchen magic makes the meat softer than butter like a loose pate of some kind. Excellent dish. <i class="fas fa-quote-right"></i></p></div>
+                      <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></div>
+                      <p class="cust-para "> <i class="fa fa-quote-left" aria-hidden="true"></i> The galouti kebab roll. I had internally scoffed when the owner said its mouth melting. It really does melt in your mouth. Some kitchen magic makes the meat softer than butter like a loose pate of some kind. Excellent dish. <i class="fa fa-quote-right" aria-hidden="true"></i></p></div>
             </div>
        </div>
 
@@ -203,13 +170,8 @@
 
        <!--start of contact div-->
          <div id="contact">
-            <div class="wow slideInLeft left-con">
-                
-               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.3857294159898!2d77.0793973142556!3d28.467927982482994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d18de6f661855%3A0xd2615f3ed911c421!2sJanaab!5e0!3m2!1sen!2sin!4v1500181397151" width="500" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
-              
-            </div>
-            <div class="right-con">
-                <div id="inner-contact" class="wow slideInRight">
+            <div class="left-con">
+                <div id="inner-contact" class="wow slideInLeft">
                     <a id="contact-logo" href="index.php"></a>
                     <p id="address"><b> Address:</b><br> 
                            Shop SF-51, 1st Floor,
@@ -231,9 +193,13 @@
                   
                   <a href="mailto:janaab.restaurant@gmail.com" target="_top"><img id="swiggy" class="social-img wow bounceInLeft" data-wow-delay="1.2s" src="assets/css/img/mail.png"></a>
                  </div>
-                </div>
+                  </div>
             </div>
-                  
+            <div class="wow slideInRight right-con">
+                
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.3857294159898!2d77.0793973142556!3d28.467927982482994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d18de6f661855%3A0xd2615f3ed911c421!2sJanaab!5e0!3m2!1sen!2sin!4v1500181397151" width="500" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+              
+            </div>      
            
          </div>
        
@@ -242,11 +208,11 @@
        <div id="footer">
          <p>&copy; Copyright 2017 JANAAB. All Rights Reserved</p>
          <p>Food shown are for illustration purpose only. Actual product may differ from the images shown in this website.</p>
-         <!-- <hr> -->
+         <hr>
        		Designed with 
-       		<i class="fas fa-heart"></i> by 
-       		<a class="Myname" href="mailto:mp1995singh@gmail.com?Subject=@Janaab%20Food"  target="_top">Mahesh Pratap</a>
-         <a id="top" class="wow bounceIn" href="#first"><i class="fas fa-chevron-up"></i></a>
+       		<i class="fa fa-heart" aria-hidden="true"></i> by 
+       		<a href="mailto:mp1995singh@gmail.com?Subject=@Janaab%20Food"  target="_top">Mahesh Pratap</a>
+         <a id="top" class="wow bounceIn" href="#first"><i class="ti ti-angle-up" aria-hidden="true"></i></a>
        </div>
        
 		<!-- loader -->
@@ -285,26 +251,19 @@
 	      	$('.carousel').slick({
 				  autoplay:true,
 				  autoplaySpeed: 3000,
-          arrows:true,
-          dots:true,
 				  slidesToShow: 1,
 				  fade: true,
-  				cssEase: 'linear',
-          pauseOnHover:false,
-          pauseOnFocus:false,
+  				  cssEase: 'linear',
 				  responsive: [
 				    {
 				      breakpoint: 768,
 				      settings: {
 				        arrows: false,
 				        autoplay:true,
-				  		  autoplaySpeed: 3000,
-                dots:true,
-				  		  fade: true,
-				  	    cssEase: 'linear',
-				        slidesToShow: 1,
-                pauseOnHover:false,
-                pauseOnFocus:false,
+				  		autoplaySpeed: 3000,
+				  		fade: true,
+  				  	    cssEase: 'linear',
+				        slidesToShow: 1
 				      }
 				    },
 				    {
@@ -312,13 +271,10 @@
 				      settings: {
 				        arrows: false,
 				        autoplay:true,
-				  		  autoplaySpeed: 3000,
-				  		  fade: true,
-                dots:true,
-				  	    cssEase: 'linear',
-				        slidesToShow: 1,
-                pauseOnHover:false,
-                pauseOnFocus:false,
+				  		autoplaySpeed: 3000,
+				  		fade: true,
+  				  	    cssEase: 'linear',
+				        slidesToShow: 1
 				      }
 				    }
 				  ]

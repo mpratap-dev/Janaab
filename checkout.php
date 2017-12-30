@@ -19,10 +19,10 @@ if(!isset($_SESSION['username'])){
        <nav>
            <ul>
                <li class="before-logo"><a href="index.php">Home</a></li>
-               <li class="before-logo"><a href="index.php/#about">About</a></li>
+               <li class="before-logo"><a href="index.php#about">About</a></li>
                <li id="logo"><a href="index.php"> </a></li>
                <li class="after-logo"><a href="menu.php">Menu</a></li>
-               <li class="after-logo"><a href="index.php/#contact">Contact</a></li>
+               <li class="after-logo"><a href="index.php#contact">Contact</a></li>
            </ul>
        </nav>
    </div>

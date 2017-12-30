@@ -10,7 +10,7 @@ if(isset($_POST['submitted'])){
 	$address=$_POST['address'];
 	$sql = "INSERT INTO users (uname,email,phone,pass,address) VALUES ('$uname','$email','$phon','$pass','$address')";
 	
-	if(empty($address)){
+	if(empty($address)||empty($uname)||empty($email)||empty($phon)||empty($pass)){
 		echo "<script>alert('All fields are compulsory')</script>";
 	} 
 	else if(mysql_query($sql)){
@@ -22,6 +22,7 @@ if(isset($_POST['submitted'])){
 <html>
 <head>
 	<title>Janaab Restaurant</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="assets/css/img/logo_new.png" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/signup.css">
