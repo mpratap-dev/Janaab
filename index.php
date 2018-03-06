@@ -245,7 +245,7 @@
          <!-- <hr> -->
        		Designed with 
        		<i class="fas fa-heart"></i> by 
-       		<a class="Myname" href="mailto:mp1995singh@gmail.com?Subject=@Janaab%20Food"  target="_top">Mahesh Pratap</a>
+       		<a class="Myname" href="mailto:mp1995singh@gmail.com?Subject=@Janaab%20Food"  target="_top">FYITS</a>
          <a id="top" class="wow bounceIn" href="#first"><i class="fas fa-chevron-up"></i></a>
        </div>
        
